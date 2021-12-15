@@ -1,3 +1,26 @@
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box
+	}
+
+	html {
+		font-family:'Lato', sans-serif;
+		font-size: 8px;
+	}
+
+	@media (min-width:768px) {
+		html{
+			font-size: 10px;
+		}
+	}
+`;
+
 const COLORS = {
 	AERO_ORANGE: "#FDAF1D" /* IS NOT EXACT THE SAME AS AEROLABS ONE */,
 	YELLOW_COIN: "#FDD13D",
@@ -12,4 +35,4 @@ const MEDIA_SIZES = {
 	LARGE_DESKTOP: "1440px",
 };
 
-export { COLORS, MEDIA_SIZES };
+export { GlobalStyles, COLORS, MEDIA_SIZES };
