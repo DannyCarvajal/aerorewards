@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
 	html {
 		font-family:'Lato', sans-serif;
-		font-size: 8px;
+		font-size: 9px;
 	}
 
 	@media (min-width:768px) {
@@ -23,16 +23,18 @@ const GlobalStyles = createGlobalStyle`
 
 const THEME = {
 	// COLORS
-	MAGIC_PURPLE: "#5118F5",
-	YELLOW_COIN: "#FDD13D",
+	BLACK: " rgba(0, 0, 0, 0.75);",
 	MAIN_BLUE: "#0AD4FA",
 	DARK_BLUE: "#12BBFF",
+	RED_FORBIDDEN: "#D90680",
+	LIGHT_GRAY: "#EDEDED",
 	// TEXT
 	TEXT_DARK: "#616161",
 	TEXT_LIGHT: "#A3A3A3",
-
 	// FONTS
-	SUBTITLE: "1.9rem",
+	MAIN_TITLE: "5rem",
+	MEDIUM: "1.9rem",
+	SMALL: "1.6rem",
 };
 
 const MEDIA_SIZES = {

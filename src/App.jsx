@@ -3,14 +3,14 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles, THEME } from "constants/globalStyles";
 // Pages
 import Home from "pages/Home";
-import Products from "pages/Products";
+import Products from "pages/products/Products";
 import BetMachine from "pages/BetMachine";
 // Router
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // Components
 import NavbarContainer from "components/Navbar/NavbarContainer/NavContainer";
 // Context
-import PointsProvider from "context/pointsContext";
+import PointsProvider from "points/pointsContext";
 
 function App() {
 	return (

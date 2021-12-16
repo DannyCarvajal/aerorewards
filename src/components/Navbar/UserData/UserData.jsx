@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { usePoints } from "context/pointsContext";
+import { usePoints } from "points/pointsContext";
 // Styles
 import { UserDataContainer } from "./styled";
 // Services

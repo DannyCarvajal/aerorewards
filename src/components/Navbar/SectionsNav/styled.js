@@ -11,8 +11,9 @@ const SectionsContainerNav = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #5118f5;
+	background: rgba(0, 0, 0, 0.85);
 	gap: 3rem;
+	z-index: 1;
 
 	.userDataContainer {
 		margin-top: 20px;
@@ -42,7 +43,7 @@ const StyledLink = styled(Link)`
 
 	@media screen and (min-width: 768px) {
 		color: #000;
-		font-size: ${props => props.theme.SUBTITLE};
+		font-size: ${props => props.theme.MEDIUM};
 		font-weight: 500;
 	}
 `;

@@ -15,4 +15,4 @@ const getUserData = fetchData(userDataUrl);
 const getReedemHistory = fetchData(reedemHistoryUrl);
 const getProducts = fetchData(getProductsUrl);
 
-export { getUserData, getReedemHistory, getProducts, headers };
+export { getUserData, getReedemHistory, getProducts };

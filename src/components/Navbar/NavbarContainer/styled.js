@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NavContainer = styled.div`
+const NavContainer = styled.nav`
 	width: 100%;
 	height: 80px;
 	background: #fff;

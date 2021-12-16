@@ -16,7 +16,7 @@ const UserDataContainer = styled.div`
 	@media screen and (min-width: 768px) {
 		.userName {
 			color: ${({ theme }) => theme.TEXT_DARK};
-			font-size: ${({ theme }) => theme.SUBTITLE};
+			font-size: ${({ theme }) => theme.MEDIUM};
 		}
 	}
 `;

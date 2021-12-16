@@ -4,8 +4,6 @@ import { NavContainer, Hamburger } from "./styled";
 import { AeroLogo } from "components/Global/images.styled";
 // Componets
 import SectionsNav from "../SectionsNav/SectionsNav";
-// Assets
-import fullLogo from "assets/images/fullLogo.png";
 // Router
 import { Link } from "react-router-dom";
 
@@ -16,7 +14,7 @@ const NavbarContainer = () => {
 	return (
 		<NavContainer>
 			<Link to="/">
-				<AeroLogo src={fullLogo} />
+				<AeroLogo />
 			</Link>
 			<SectionsNav active={showMobileMenu} />
 			<Hamburger onClick={menuHandler} active={showMobileMenu} />
