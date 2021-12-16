@@ -3,15 +3,16 @@ import styled from "styled-components";
 const StyledFilterContainer = styled.div`
 	display: flex;
 	position: relative;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	gap: 10px;
 	height: 40px;
 	flex-wrap: wrap;
 
-	@media (min-width: 768px) {
+	@media (min-width: 1024px) {
 		gap: 25px;
 		justify-content: center;
+		justify-content: flex-start;
 	}
 `;
 

@@ -19,6 +19,11 @@ const GlobalStyles = createGlobalStyle`
 			font-size: 10px;
 		}
 	}
+	@media (min-width: 1440px) {
+		html{
+			font-size: 10.5px;
+		}
+	}
 `;
 
 const THEME = {

@@ -34,7 +34,10 @@ const ProductCard = ({ product }) => {
 	let pointsToBuy = cost - points;
 	let btnText = canBuy ? "Redeem now" : `you need ${pointsToBuy} more points`;
 	let largeText = name.length > 20;
-	getReedemHistory().then(console.log);
+
+	const buyProduct = () => {
+		alert("You bought " + name + " for " + cost + " points");
+	};
 
 	return (
 		<StyledCard>
@@ -45,7 +48,9 @@ const ProductCard = ({ product }) => {
 				<ProductName>{name}</ProductName>
 				<ProductCategory largeText={largeText}>{category}</ProductCategory>
 			</ProductInfoWrapper>
-			<RedeemButton canBuy={canBuy}>{btnText}</RedeemButton>
+			<RedeemButton canBuy={canBuy} onClick={buyProduct}>
+				{btnText}
+			</RedeemButton>
 		</StyledCard>
 	);
 };

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const CountContainer = styled.div`
+const CountContainer = styled.div.attrs({
+	className: "countContainer",
+})`
 	display: flex;
 	position: relative;
 	justify-content: center;
