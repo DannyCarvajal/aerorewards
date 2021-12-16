@@ -1,29 +1,30 @@
 import { useState, useEffect } from "react";
 import { usePoints } from "context/pointsContext";
 // Styles
-import { UserDataContainer, PointsContainer } from "./styled";
+import { UserDataContainer } from "./styled";
 // Services
 import { getUserData } from "services/getData";
-// Assets
-import coin from "assets/icons/coin.png";
+// Components
+import PointsContainer from "components/Global/PointsContainer/PointsContainer";
 
 const UserData = () => {
 	const [userName, setUserName] = useState("");
 	const points = usePoints();
 
 	useEffect(() => {
-		getUserData().then(data => {
-			setUserName(data.name);
-		});
+		getUserData()
+			.then(data => {
+				setUserName(data.name);
+			})
+			.catch(err => {
+				console.log(err);
+			});
 	}, []);
 
 	return (
-		<UserDataContainer>
+		<UserDataContainer className="userDataContainer">
 			<h2 className="userName">{userName}</h2>
-			<PointsContainer>
-				<h2 className="points">{points}</h2>
-				<img src={coin} alt="coin" width={25} height={25} />
-			</PointsContainer>
+			<PointsContainer points={points} />
 		</UserDataContainer>
 	);
 };

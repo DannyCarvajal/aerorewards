@@ -1,7 +1,7 @@
 import React from "react";
 
 const BetMachine = () => {
-	return <div>I bet I can do it</div>;
+	return <div>Bet machine</div>;
 };
 
 export default BetMachine;

@@ -21,11 +21,18 @@ const GlobalStyles = createGlobalStyle`
 	}
 `;
 
-const COLORS = {
-	AERO_ORANGE: "#FDAF1D" /* IS NOT EXACT THE SAME AS AEROLABS ONE */,
+const THEME = {
+	// COLORS
+	MAGIC_PURPLE: "#5118F5",
 	YELLOW_COIN: "#FDD13D",
 	MAIN_BLUE: "#0AD4FA",
 	DARK_BLUE: "#12BBFF",
+	// TEXT
+	TEXT_DARK: "#616161",
+	TEXT_LIGHT: "#A3A3A3",
+
+	// FONTS
+	SUBTITLE: "1.9rem",
 };
 
 const MEDIA_SIZES = {
@@ -35,4 +42,4 @@ const MEDIA_SIZES = {
 	LARGE_DESKTOP: "1440px",
 };
 
-export { GlobalStyles, COLORS, MEDIA_SIZES };
+export { GlobalStyles, THEME, MEDIA_SIZES };

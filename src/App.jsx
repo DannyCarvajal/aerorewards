@@ -1,6 +1,6 @@
 // Styles
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles, COLORS } from "constants/globalStyles";
+import { GlobalStyles, THEME } from "constants/globalStyles";
 // Pages
 import Home from "pages/Home";
 import Products from "pages/Products";
@@ -8,17 +8,17 @@ import BetMachine from "pages/BetMachine";
 // Router
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // Components
-import Navbar from "components/Navbar/index";
+import NavbarContainer from "components/Navbar/NavbarContainer/NavContainer";
 // Context
 import PointsProvider from "context/pointsContext";
 
 function App() {
 	return (
 		<PointsProvider>
-			<ThemeProvider theme={COLORS}>
-				<GlobalStyles />
-				<Navbar />
+			<ThemeProvider theme={THEME}>
 				<BrowserRouter>
+					<GlobalStyles />
+					<NavbarContainer />
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/products" element={<Products />} />

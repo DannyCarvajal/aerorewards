@@ -3,9 +3,12 @@ import styled from "styled-components";
 const AeroLogo = styled.img.attrs({
 	alt: "fullLogo",
 })`
-	width: ${props => (props.small ? "200px" : "300px")};
+	width: 200px;
 	justify-self: "flex-start";
-	padding-left: 10px;
+
+	@media (min-width: 768px) {
+		width: 250px;
+	}
 `;
 
 export { AeroLogo };
