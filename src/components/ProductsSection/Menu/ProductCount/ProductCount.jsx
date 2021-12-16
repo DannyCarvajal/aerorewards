@@ -1,12 +1,17 @@
+// Styles
 import { CountContainer, CountTitle } from "./styled";
+// Consuming context
+import { usePagination } from "products/paginationContext";
 
 const ProductCount = ({ totalAmount = 32 }) => {
-	let curr = Math.floor(totalAmount / 3);
+	const [currPage] = usePagination();
+	console.log(currPage);
+	let amountOfProducts = (currPage + 1) * 12 > totalAmount ? totalAmount : (currPage + 1) * 12;
 
 	return (
 		<CountContainer>
 			<CountTitle>
-				{curr} of {totalAmount} products
+				{amountOfProducts} of {totalAmount} products
 			</CountTitle>
 		</CountContainer>
 	);

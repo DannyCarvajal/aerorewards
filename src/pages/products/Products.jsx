@@ -6,15 +6,18 @@ import MenuContainer from "components/ProductsSection/Menu/MenuContainer/MenuCon
 import ProductsContainer from "components/ProductsSection/ProductGrid/ProductsContainer/ProductsContainer";
 // Context
 import ProductsProvider from "products/productsContext";
+import PaginationProvider from "products/paginationContext";
 
 const Products = () => {
 	return (
 		<ProductsProvider>
-			<ProductsSection>
-				<Header />
-				<MenuContainer />
-				<ProductsContainer />
-			</ProductsSection>
+			<PaginationProvider>
+				<ProductsSection>
+					<Header />
+					<MenuContainer />
+					<ProductsContainer />
+				</ProductsSection>
+			</PaginationProvider>
 		</ProductsProvider>
 	);
 };

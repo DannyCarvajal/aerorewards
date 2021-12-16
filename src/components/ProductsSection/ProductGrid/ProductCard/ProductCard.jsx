@@ -12,8 +12,6 @@ import {
 import { usePoints } from "points/pointsContext";
 // Components
 import PointsContainer from "components/Global/PointsContainer/PointsContainer";
-// Services
-import { getReedemHistory } from "services/getData";
 
 // Schema
 /*{ 
@@ -35,10 +33,6 @@ const ProductCard = ({ product }) => {
 	let btnText = canBuy ? "Redeem now" : `you need ${pointsToBuy} more points`;
 	let largeText = name.length > 20;
 
-	const buyProduct = () => {
-		alert("You bought " + name + " for " + cost + " points");
-	};
-
 	return (
 		<StyledCard>
 			<CanBuyIcon canBuy={canBuy} />
@@ -48,9 +42,7 @@ const ProductCard = ({ product }) => {
 				<ProductName>{name}</ProductName>
 				<ProductCategory largeText={largeText}>{category}</ProductCategory>
 			</ProductInfoWrapper>
-			<RedeemButton canBuy={canBuy} onClick={buyProduct}>
-				{btnText}
-			</RedeemButton>
+			<RedeemButton canBuy={canBuy}>{btnText}</RedeemButton>
 		</StyledCard>
 	);
 };

@@ -22,8 +22,8 @@ const ProductImg = styled.img.attrs(({ img }) => ({
 `;
 
 const StyledCard = styled.div`
-	width: 270px;
-	height: 390px;
+	width: 260px;
+	height: 380px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

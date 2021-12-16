@@ -6,7 +6,6 @@ const GridProductContainer = styled.div`
 	grid-template-columns: repeat(2, minmax(235px, 1fr));
 	grid-auto-rows: 340px;
 	place-items: center;
-	align-content: center;
 	margin-top: 60px;
 	min-height: 1000px;
 
