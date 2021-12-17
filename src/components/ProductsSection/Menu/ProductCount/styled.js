@@ -9,6 +9,7 @@ const CountContainer = styled.div.attrs({
 	align-items: center;
 	height: 40px;
 	width: fit-content;
+	min-width: 160px;
 	padding-right: 10px;
 	border-right: 1px solid #d9d9d9;
 `;

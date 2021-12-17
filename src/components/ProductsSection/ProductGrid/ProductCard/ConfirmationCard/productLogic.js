@@ -12,9 +12,11 @@ const useProductLogic = ({ setIsRedeemed, _id }) => {
 		reedemProduct(_id)
 			.then(_ => {
 				reloadPoints();
-				setIsRedeemed(false);
+				setIsRedeemed(true);
 			})
 			.catch(err => {
+				setIsRedeemed("ERROR");
+				setTimeout(() => setIsRedeemed(false), 4000);
 				console.log(err);
 			});
 	};

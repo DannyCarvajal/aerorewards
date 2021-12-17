@@ -17,6 +17,7 @@ const UserDataContainer = styled.div`
 		.userName {
 			color: ${({ theme }) => theme.TEXT_DARK};
 			font-size: ${({ theme }) => theme.MEDIUM};
+			min-width: 24px;
 		}
 	}
 `;

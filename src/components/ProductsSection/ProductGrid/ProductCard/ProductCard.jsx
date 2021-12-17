@@ -2,6 +2,7 @@ import { useState } from "react";
 // Components
 import NormalCard from "./NormalCard/NormalCard";
 import ConfirmationCard from "./ConfirmationCard/ConfirmationCard";
+import SuccessCard from "./SuccessCard/SuccessCard";
 
 const ProductCard = ({ product }) => {
 	// FALSE, PROCESS, TRUE
@@ -10,8 +11,10 @@ const ProductCard = ({ product }) => {
 
 	if (!isRedeemed) {
 		return <NormalCard product={product} setRedeemInProcess={setRedeemInProcess} />;
-	} else {
+	} else if (isRedeemed === "PROCESS") {
 		return <ConfirmationCard product={product} setIsRedeemed={setIsRedeemed} />;
+	} else {
+		return <SuccessCard success={isRedeemed} />;
 	}
 };
 
