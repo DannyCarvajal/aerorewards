@@ -12,18 +12,18 @@ const productsReducer = (state, action) => {
 			return action.payload;
 
 		case PRODUCT_ACTIONS.RECENT:
-			return {
-				...state,
-			};
+			console.log("recent");
+			return [...state];
 		case PRODUCT_ACTIONS.HIGHER_PRICE_TO_LOWER:
-			return {
-				...state,
-			};
+			console.log("higher price to lower");
+			return action.payload.sort((a, b) => b.cost - a.cost);
+
 		case PRODUCT_ACTIONS.LOWER_PRICE_TO_HIGHER:
-			return {
-				...state,
-			};
+			console.log("lower price to higher");
+			return action.payload.sort((a, b) => a.cost - b.cost);
+
 		case PRODUCT_ACTIONS.MY_PRODUCTS:
+			console.log("my products");
 			return {
 				...state,
 			};

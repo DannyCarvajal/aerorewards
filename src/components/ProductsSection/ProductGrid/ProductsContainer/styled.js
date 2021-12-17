@@ -7,7 +7,7 @@ const GridProductContainer = styled.div`
 	grid-auto-rows: 340px;
 	place-items: center;
 	margin-top: 60px;
-	min-height: 1000px;
+	margin-bottom: 20px;
 
 	@media (min-width: 768px) {
 		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));

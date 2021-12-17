@@ -7,9 +7,11 @@ import { useProducts } from "products/productsContext";
 import { usePagination } from "products/paginationContext";
 
 const ProductsContainer = () => {
-	const [products, currProducts, dispatch] = useProducts();
+	const [, currProducts] = useProducts();
 	const [currPage] = usePagination();
 	const productsPerPage = 12;
+
+	console.log(currProducts);
 	const displayProducts = currProducts.slice(
 		currPage * productsPerPage,
 		(currPage + 1) * productsPerPage

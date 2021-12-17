@@ -9,6 +9,7 @@ import BetMachine from "pages/BetMachine";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // Components
 import NavbarContainer from "components/Navbar/NavbarContainer/NavContainer";
+import Footer from "components/Footer/Footer";
 // Context
 import PointsProvider from "points/pointsContext";
 
@@ -25,6 +26,7 @@ function App() {
 						<Route path="/game" element={<BetMachine />} />
 						<Route path="*" element={<Navigate to="/" />} />
 					</Routes>
+					<Footer />
 				</BrowserRouter>
 			</ThemeProvider>
 		</PointsProvider>

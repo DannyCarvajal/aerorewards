@@ -5,7 +5,6 @@ import { usePagination } from "products/paginationContext";
 
 const ProductCount = ({ totalAmount = 32 }) => {
 	const [currPage] = usePagination();
-	console.log(currPage);
 	let amountOfProducts = (currPage + 1) * 12 > totalAmount ? totalAmount : (currPage + 1) * 12;
 
 	return (
