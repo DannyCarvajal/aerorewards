@@ -3,14 +3,14 @@ import { CountContainer, CountTitle } from "./styled";
 // Consuming context
 import { usePagination } from "products/paginationContext";
 
-const ProductCount = ({ totalAmount = 32 }) => {
-	const [currPage] = usePagination();
-	let amountOfProducts = (currPage + 1) * 12 > totalAmount ? totalAmount : (currPage + 1) * 12;
+const ProductCount = () => {
+	const [, fromToProduct, productAmount] = usePagination();
+	let currAmountProducts = fromToProduct[1] > productAmount ? productAmount : fromToProduct[1];
 
 	return (
 		<CountContainer>
 			<CountTitle>
-				{amountOfProducts} of {totalAmount} products
+				{currAmountProducts} of {productAmount} products
 			</CountTitle>
 		</CountContainer>
 	);

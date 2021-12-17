@@ -8,14 +8,8 @@ import { usePagination } from "products/paginationContext";
 
 const ProductsContainer = () => {
 	const [, currProducts] = useProducts();
-	const [currPage] = usePagination();
-	const productsPerPage = 12;
-
-	console.log(currProducts);
-	const displayProducts = currProducts.slice(
-		currPage * productsPerPage,
-		(currPage + 1) * productsPerPage
-	);
+	const [, fromToProduct] = usePagination();
+	const displayProducts = currProducts.slice(fromToProduct[0], fromToProduct[1]);
 
 	return (
 		<GridProductContainer>

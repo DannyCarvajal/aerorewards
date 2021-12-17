@@ -7,13 +7,13 @@ import FilterContainer from "../FilterContainer/FilterContainer";
 import { usePagination } from "products/paginationContext";
 
 const MenuContainer = () => {
-	const [, updatePage] = usePagination();
+	const [, , , updatePageForwards] = usePagination();
 
 	return (
 		<StyledMenu>
-			<ProductCount totalAmount={32} />
+			<ProductCount />
 			<FilterContainer />
-			<ArrowRight onClick={updatePage} />
+			<ArrowRight onClick={updatePageForwards} />
 		</StyledMenu>
 	);
 };

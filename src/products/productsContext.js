@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useContext, createContext, useState } from "react";
+import { useEffect, useReducer, useContext, createContext, useRef } from "react";
 // Services
 import { getProducts } from "services/getData";
 // Reducer
@@ -8,13 +8,13 @@ const productsContext = createContext();
 export const useProducts = () => useContext(productsContext);
 
 const ProductsProvider = ({ children }) => {
-	const [products, setProducts] = useState([]);
+	const products = useRef([]);
 	const [currProd, dispatch] = useReducer(productsReducer, []);
 
 	useEffect(() => {
 		getProducts()
 			.then(data => {
-				setProducts(data);
+				products.current = data;
 				dispatch({ type: "INIT", payload: data });
 			})
 			.catch(err => {
@@ -22,8 +22,12 @@ const ProductsProvider = ({ children }) => {
 			});
 	}, []);
 
+	// useEffect(() => {
+	// 	console.log("and new state is ", currProd);
+	// }, [currProd]);
+
 	return (
-		<productsContext.Provider value={[products, currProd, dispatch]}>
+		<productsContext.Provider value={[products.current, currProd, dispatch]}>
 			{children}
 		</productsContext.Provider>
 	);

@@ -10,11 +10,11 @@ const StyledFilterButton = styled.button`
 	justify-content: center;
 	border: none;
 	font-size: ${({ theme }) => theme.MEDIUM};
-	color: ${({ theme }) => theme.TEXT_LIGHT};
+	color: ${({ active, theme }) => (active ? "white" : theme.TEXT_LIGHT)};
 	cursor: pointer;
 	outline: none;
 
-	background-color: ${({ theme }) => theme.LIGHT_GRAY};
+	background-color: ${({ active, theme }) => (active ? theme.MAIN_BLUE : theme.LIGHT_GRAY)};
 
 	&:active {
 		background-color: ${({ theme }) => theme.MAIN_BLUE};
