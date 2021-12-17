@@ -38,6 +38,7 @@ const THEME = {
 	TEXT_LIGHT: "#A3A3A3",
 	// FONTS
 	MAIN_TITLE: "5rem",
+	LARGE: "2.3rem",
 	MEDIUM: "1.9rem",
 	SMALL: "1.6rem",
 };

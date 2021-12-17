@@ -8,6 +8,7 @@ const GridProductContainer = styled.div`
 	place-items: center;
 	margin-top: 60px;
 	margin-bottom: 20px;
+	min-height: 1200px;
 
 	@media (min-width: 768px) {
 		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));

@@ -6,15 +6,20 @@ const PointsContext = createContext();
 const usePoints = () => useContext(PointsContext);
 
 function PointsProvider({ children }) {
-	const [points, setPoints] = useState(0);
+	const [points, setPoints] = useState(null);
 
-	useEffect(() => {
-		getUserData().then(data => {
-			setPoints(data.points);
-		});
-	}, [points]);
+	const initPoints = async () => {
+		try {
+			const { points } = await getUserData();
+			setPoints(points);
+		} catch (error) {
+			console.error(error);
+		}
+	};
 
-	return <PointsContext.Provider value={points}>{children}</PointsContext.Provider>;
+	useEffect(() => initPoints(), [points]);
+
+	return <PointsContext.Provider value={[points, initPoints]}>{children}</PointsContext.Provider>;
 }
 
 export default PointsProvider;

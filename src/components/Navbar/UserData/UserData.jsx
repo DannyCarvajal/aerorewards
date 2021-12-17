@@ -9,7 +9,7 @@ import PointsContainer from "components/Global/PointsContainer/PointsContainer";
 
 const UserData = () => {
 	const [userName, setUserName] = useState("");
-	const points = usePoints();
+	const [points] = usePoints();
 
 	useEffect(() => {
 		getUserData()
