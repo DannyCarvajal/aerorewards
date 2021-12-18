@@ -4,7 +4,7 @@ import { GlobalStyles, THEME } from "constants/globalStyles";
 // Pages
 import Home from "pages/Home";
 import Products from "pages/products/Products";
-import BetMachine from "pages/BetMachine";
+import GameSection from "pages/game/Game";
 // Router
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // Components
@@ -23,7 +23,7 @@ function App() {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/products" element={<Products />} />
-						<Route path="/game" element={<BetMachine />} />
+						<Route path="/game" element={<GameSection />} />
 						<Route path="*" element={<Navigate to="/" />} />
 					</Routes>
 					<Footer />
