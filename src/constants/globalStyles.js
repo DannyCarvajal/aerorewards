@@ -46,6 +46,7 @@ const THEME = {
 
 const MEDIA_SIZES = {
 	MOBILE: "320px",
+	PASSAGIO: "480px",
 	TABLET: "768px",
 	DESKTOP: "1024px",
 	LARGE_DESKTOP: "1440px",

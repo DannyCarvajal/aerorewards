@@ -9,15 +9,15 @@ import { Link } from "react-router-dom";
 
 const NavbarContainer = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
-	const menuHandler = () => setShowMobileMenu(!showMobileMenu);
+	const hideMenu = () => setShowMobileMenu(!showMobileMenu);
 
 	return (
 		<NavContainer>
 			<Link to="/">
 				<AeroLogo />
 			</Link>
-			<SectionsNav active={showMobileMenu} />
-			<Hamburger onClick={menuHandler} active={showMobileMenu} />
+			<SectionsNav active={showMobileMenu} hideMenu={hideMenu} />
+			<Hamburger onClick={hideMenu} active={showMobileMenu} />
 		</NavContainer>
 	);
 };

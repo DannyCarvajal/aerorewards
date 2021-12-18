@@ -17,14 +17,14 @@ function App() {
 	return (
 		<PointsProvider>
 			<ThemeProvider theme={THEME}>
-				<BrowserRouter>
+				<BrowserRouter basename="/aerorewards">
 					<GlobalStyles />
 					<NavbarContainer />
 					<Routes>
-						<Route path="/aerorewards" element={<Home />} />
+						<Route path="/" element={<Home />} />
 						<Route path="/products" element={<Products />} />
 						<Route path="/game" element={<BetMachine />} />
-						<Route path="*" element={<Navigate to="/aerorewards" />} />
+						<Route path="*" element={<Navigate to="/" />} />
 					</Routes>
 					<Footer />
 				</BrowserRouter>

@@ -23,7 +23,7 @@ const NormalCard = ({ product, setRedeemInProcess }) => {
 	let largeText = name.length > 20;
 
 	return (
-		<StyledCard>
+		<StyledCard className="card">
 			<CanBuyIcon canBuy={canBuy} />
 			<ProductImg img={img.url} />
 			<PointsContainer points={cost} type="price" />

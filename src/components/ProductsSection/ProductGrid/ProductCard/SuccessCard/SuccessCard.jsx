@@ -7,7 +7,7 @@ const SuccessCard = ({ success }) => {
 	let Icon = () => (success === true ? <CheckIcon /> : <CancelIcon />);
 
 	return (
-		<StyledSuccessCard success={success}>
+		<StyledSuccessCard success={success} className="card">
 			<Icon />
 			<SuccessText>{text}</SuccessText>
 		</StyledSuccessCard>

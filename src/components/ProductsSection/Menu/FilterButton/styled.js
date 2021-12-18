@@ -3,8 +3,8 @@ import styled from "styled-components";
 const StyledFilterButton = styled.button`
 	text-decoration: none;
 	border-radius: 15px;
-	height: 42px;
-	width: 170px;
+	height: 40px;
+	width: 130px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -23,6 +23,11 @@ const StyledFilterButton = styled.button`
 	&:hover {
 		background-color: ${({ theme }) => theme.MAIN_BLUE};
 		color: white;
+	}
+
+	@media (min-width: 480px) {
+		height: 42px;
+		width: 170px;
 	}
 `;
 

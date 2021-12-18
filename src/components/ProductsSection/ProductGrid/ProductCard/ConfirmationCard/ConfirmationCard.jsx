@@ -9,7 +9,7 @@ const ConfirmationCard = ({ product, setIsRedeemed }) => {
 	const { cancelRedeem, completeRedeem } = useProductLogic({ setIsRedeemed, _id });
 
 	return (
-		<StyledConfirmCard>
+		<StyledConfirmCard className="card">
 			<CanBuyWhite />
 			<ConfirmText>
 				Confirm you want to redeem the <b>{name}</b> for <b>{cost} points</b> ?

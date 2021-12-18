@@ -32,11 +32,18 @@ const PointsStyled = styled.div.attrs({
 					align-items: center;
 					font-size: 1.4rem;
 					font-weight: bold;
-					background: ${({ theme }) => theme.BLACK};
+					background: white;
 					border-radius: 15px;
 
 					.points {
-						color: #fff;
+						color: black;
+					}
+
+					@media (min-width: 768px) {
+						background: ${({ theme }) => theme.BLACK};
+						.points {
+							color: #fff;
+						}
 					}
 				`;
 		}
