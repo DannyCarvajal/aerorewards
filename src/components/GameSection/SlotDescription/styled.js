@@ -8,13 +8,25 @@ const StyledSlotDescription = styled.div`
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	width: 30%;
+	width: 100%;
 
 	${SpinsLeftContainer} {
 		position: absolute;
-		top: 50px;
+		bottom: -50px;
 		right: 0;
-		padding: 15px 60px;
+		padding: 10px 40px;
+	}
+
+	@media (min-width: 768px) {
+		width: 30%;
+
+		${SpinsLeftContainer} {
+			position: absolute;
+			top: 50px;
+			bottom: unset;
+			right: 0;
+			padding: 15px 60px;
+		}
 	}
 `;
 

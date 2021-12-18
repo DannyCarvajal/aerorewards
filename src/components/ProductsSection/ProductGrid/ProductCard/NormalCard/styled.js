@@ -88,6 +88,10 @@ const RedeemButton = styled.button`
 	bottom: 15px;
 	text-align: center;
 	cursor: ${({ canBuy }) => (canBuy ? "pointer" : "static")};
+
+	&:hover {
+		background: #18bbe8;
+	}
 `;
 
 export {
