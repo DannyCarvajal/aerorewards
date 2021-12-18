@@ -21,10 +21,10 @@ function App() {
 					<GlobalStyles />
 					<NavbarContainer />
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="/aerorewards" element={<Home />} />
 						<Route path="/products" element={<Products />} />
 						<Route path="/game" element={<BetMachine />} />
-						<Route path="*" element={<Navigate to="/" />} />
+						<Route path="*" element={<Navigate to="/aerorewards" />} />
 					</Routes>
 					<Footer />
 				</BrowserRouter>
