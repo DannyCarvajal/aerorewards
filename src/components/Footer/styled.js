@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
 const FooterText = styled.h2`
 	font-weight: 400;
 	font-style: italic;
-	margin: 0 70px;
+	margin: 0 10%;
 `;
 
 export { StyledFooter, FooterText };

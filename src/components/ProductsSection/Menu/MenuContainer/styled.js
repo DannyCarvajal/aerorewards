@@ -1,15 +1,5 @@
 import styled from "styled-components";
-import arrowRight from "assets/icons/arrowRight.svg";
-
-const ArrowRight = styled.img.attrs({
-	src: arrowRight,
-	alt: "arrow right",
-})`
-	cursor: pointer;
-	width: 46px;
-	height: 46px;
-	margin-left: auto;
-`;
+import { ArrowRight } from "components/Global/icons.styled";
 
 const StyledMenu = styled.div`
 	width: 90%;
@@ -26,6 +16,10 @@ const StyledMenu = styled.div`
 
 	${ArrowRight} {
 		display: none;
+	}
+
+	${ArrowRight} {
+		margin-left: auto;
 	}
 
 	.countContainer {
