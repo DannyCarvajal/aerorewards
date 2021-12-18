@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { StyledCard, CanBuyIcon } from "../NormalCard/styled";
 // Assets
 import buyWhite from "assets/icons/buyWhite.svg";
+// Animations
+import { LeftToRight } from "components/Global/transitions.styled";
 
 const ConfirmButton = styled.button`
 	background: white;
@@ -41,6 +43,7 @@ const ConfirmText = styled.p`
 const StyledConfirmCard = styled(StyledCard)`
 	justify-content: center;
 	background: ${({ theme }) => theme.MAIN_BLUE};
+	animation: ${LeftToRight} 1s ease-in-out;
 
 	${ConfirmButton} {
 		position: absolute;
