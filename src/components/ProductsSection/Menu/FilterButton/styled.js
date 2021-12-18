@@ -1,20 +1,23 @@
 import styled from "styled-components";
 
 const StyledFilterButton = styled.button`
-	text-decoration: none;
-	border-radius: 15px;
-	height: 40px;
-	width: 130px;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	border: none;
-	font-size: ${({ theme }) => theme.MEDIUM};
-	color: ${({ active, theme }) => (active ? "white" : theme.TEXT_LIGHT)};
-	cursor: pointer;
-	outline: none;
+	align-items: center;
+
+	width: 130px;
+	height: 40px;
 
 	background-color: ${({ active, theme }) => (active ? theme.MAIN_BLUE : theme.LIGHT_GRAY)};
+	border-radius: 15px;
+	border: none;
+
+	color: ${({ active, theme }) => (active ? "white" : theme.TEXT_LIGHT)};
+	font-size: ${({ theme }) => theme.MEDIUM};
+	text-decoration: none;
+
+	cursor: pointer;
+	outline: none;
 
 	&:active {
 		background-color: ${({ theme }) => theme.MAIN_BLUE};
@@ -22,6 +25,7 @@ const StyledFilterButton = styled.button`
 
 	&:hover {
 		background-color: ${({ theme }) => theme.MAIN_BLUE};
+
 		color: white;
 	}
 

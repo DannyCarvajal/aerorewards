@@ -10,8 +10,9 @@ const SpinsLeftContainer = styled.div`
 `;
 
 const SpinsLeftText = styled.p`
-	color: #fff;
 	margin: auto;
+
+	color: #fff;
 	font-size: ${({ theme }) => theme.MEDIUM};
 	font-weight: bold;
 	font-style: italic;

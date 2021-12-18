@@ -3,17 +3,18 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const SectionsContainerNav = styled.div`
-	position: absolute;
-	min-height: 400px;
-	inset: 0;
-	background: gray;
 	display: ${props => (props.active ? "flex" : "none")};
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: rgba(0, 0, 0, 0.85);
 	gap: 3rem;
+
+	position: absolute;
+	inset: 0;
+	min-height: 400px;
 	z-index: 1;
+
+	background: rgba(0, 0, 0, 0.85);
 
 	.userDataContainer {
 		margin-top: 20px;
@@ -21,13 +22,15 @@ const SectionsContainerNav = styled.div`
 
 	@media screen and (min-width: 768px) {
 		display: flex;
-		position: unset;
-		background: unset;
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: center;
 		gap: 3rem;
+
+		position: unset;
 		width: 78%;
+
+		background: unset;
 
 		.userDataContainer {
 			margin-top: unset;
@@ -37,9 +40,9 @@ const SectionsContainerNav = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-	text-decoration: none;
 	color: white;
 	font-size: 3rem;
+	text-decoration: none;
 
 	@media screen and (min-width: 768px) {
 		color: #000;

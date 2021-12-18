@@ -2,16 +2,19 @@ import styled from "styled-components";
 import { ArrowRight } from "components/Global/icons.styled";
 
 const StyledMenu = styled.div`
-	width: 90%;
-	max-width: 90%;
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: center;
-	gap: 20px;
-	flex-wrap: wrap;
-	height: fit-content;
-	padding: 25px 0px;
 	align-items: center;
+	gap: 20px;
+
+	width: 90%;
+	max-width: 90%;
+	height: fit-content;
+
+	padding: 25px 0px;
+
 	border: none;
 
 	${ArrowRight} {
@@ -27,10 +30,12 @@ const StyledMenu = styled.div`
 	}
 
 	@media (min-width: 1024px) {
-		width: 85%;
-		height: 100px;
 		flex-direction: row;
 		justify-content: space-between;
+
+		width: 85%;
+		height: 100px;
+
 		border-bottom: 1px solid #d9d9d9;
 	}
 

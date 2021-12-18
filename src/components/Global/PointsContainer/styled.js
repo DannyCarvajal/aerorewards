@@ -3,37 +3,45 @@ import styled, { css } from "styled-components";
 const PointsStyled = styled.div.attrs({
 	className: "pointsContainer",
 })`
+	display: flex;
+
 	width: fit-content;
 	height: 48px;
-	display: flex;
 	${props => {
 		switch (props.type) {
 			case "price":
 				return css`
-					padding: 0.5rem 0;
 					justify-content: space-between;
-					gap: 1rem;
 					align-items: center;
-					font-size: 1.4rem;
+					gap: 1rem;
+
+					padding: 0.5rem 0;
+
 					background: transparent;
 
+					font-size: 1.4rem;
+
 					.points {
+						color: black;
 						font-style: italic;
 						font-weight: 400;
-						color: black;
 					}
 				`;
 
 			default:
 				return css`
-					min-width: 115px;
-					padding: 0.5rem;
 					justify-content: space-evenly;
 					align-items: center;
-					font-size: 1.4rem;
-					font-weight: bold;
+
+					min-width: 115px;
+
+					padding: 0.5rem;
+
 					background: white;
 					border-radius: 15px;
+
+					font-size: 1.4rem;
+					font-weight: bold;
 
 					.points {
 						color: black;

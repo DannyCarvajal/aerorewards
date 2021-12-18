@@ -7,13 +7,15 @@ const SpinIcon = styled.i.attrs({
 `;
 
 const ButtonLevel3 = styled.div`
-	background: rgba(250, 185, 38, 0.12);
-	width: 180px;
-	height: 180px;
-	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	width: 180px;
+	height: 180px;
+
+	background: rgba(250, 185, 38, 0.12);
+	border-radius: 50%;
 
 	@media (min-width: 768px) {
 		width: 230px;
@@ -22,14 +24,17 @@ const ButtonLevel3 = styled.div`
 `;
 
 const ButtonLevel2 = styled.div`
-	background: rgba(250, 185, 38, 0.32);
-	width: 130px;
-	height: 130px;
-	border-radius: 50%;
-	margin: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	width: 130px;
+	height: 130px;
+
+	margin: auto;
+
+	background: rgba(250, 185, 38, 0.32);
+	border-radius: 50%;
 
 	@media (min-width: 768px) {
 		width: 170px;
@@ -43,12 +48,15 @@ const SpinButtonText = styled.h2`
 `;
 
 const StyledSpinButton = styled.button`
+	width: 90px;
+	height: 90px;
+
+	margin: auto;
+
 	background: #fab926;
 	border: none;
 	border-radius: 50%;
-	width: 90px;
-	height: 90px;
-	margin: auto;
+
 	cursor: pointer;
 
 	&:hover {

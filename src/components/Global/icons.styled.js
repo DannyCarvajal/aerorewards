@@ -15,18 +15,20 @@ const ArrowRight = styled.img.attrs({
 	src: arrowRight,
 	alt: "arrow right",
 })`
-	cursor: pointer;
 	width: 46px;
 	height: 46px;
+
+	cursor: pointer;
 `;
 
 const ArrowLeft = styled.img.attrs({
 	src: arrowLeft,
 	alt: "arrow left",
 })`
-	cursor: pointer;
 	width: 46px;
 	height: 46px;
+
+	cursor: pointer;
 `;
 
 export { CheckIcon, CancelIcon, ArrowRight, ArrowLeft };

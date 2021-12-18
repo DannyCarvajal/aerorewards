@@ -7,6 +7,7 @@ const StyledSlotDescription = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
 	position: relative;
 	width: 100%;
 
@@ -14,6 +15,7 @@ const StyledSlotDescription = styled.div`
 		position: absolute;
 		bottom: -50px;
 		right: 0;
+
 		padding: 10px 40px;
 	}
 
@@ -21,11 +23,12 @@ const StyledSlotDescription = styled.div`
 		width: 30%;
 
 		${SpinsLeftContainer} {
+			padding: 15px 60px;
+
 			position: absolute;
 			top: 50px;
-			bottom: unset;
 			right: 0;
-			padding: 15px 60px;
+			bottom: unset;
 		}
 	}
 `;

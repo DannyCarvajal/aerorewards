@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 const UserDataContainer = styled.div`
-	width: 280px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
+
+	width: 280px;
 
 	.userName {
 		color: white;
@@ -15,9 +16,10 @@ const UserDataContainer = styled.div`
 
 	@media screen and (min-width: 768px) {
 		.userName {
+			min-width: 24px;
+
 			color: ${({ theme }) => theme.TEXT_DARK};
 			font-size: ${({ theme }) => theme.MEDIUM};
-			min-width: 24px;
 		}
 	}
 `;

@@ -7,17 +7,20 @@ import buyWhite from "assets/icons/buyWhite.svg";
 import { LeftToRight } from "components/Global/transitions.styled";
 
 const ConfirmButton = styled.button`
-	background: white;
-	border-radius: 15px;
 	height: 40px;
 	width: 100px;
+
+	background: white;
+	border-radius: 15px;
 	border: none;
+
 	cursor: pointer;
 
 	i {
 		margin: auto;
-		font-size: ${({ theme }) => theme.MEDIUM};
+
 		color: ${({ theme }) => theme.MAIN_BLUE};
+		font-size: ${({ theme }) => theme.MEDIUM};
 	}
 `;
 
@@ -36,13 +39,16 @@ const CancelButton = styled(ConfirmButton)`
 `;
 
 const ConfirmText = styled.p`
-	font-size: ${({ theme }) => theme.LARGE};
 	max-width: 75%;
+
+	font-size: ${({ theme }) => theme.LARGE};
 `;
 
 const StyledConfirmCard = styled(StyledCard)`
 	justify-content: center;
+
 	background: ${({ theme }) => theme.MAIN_BLUE};
+
 	animation: ${LeftToRight} 1s ease-in-out;
 
 	${ConfirmButton} {
