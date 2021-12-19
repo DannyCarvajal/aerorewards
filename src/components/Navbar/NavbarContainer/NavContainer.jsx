@@ -17,7 +17,6 @@ const NavbarContainer = () => {
 		if (isMobile && showMobileMenu) {
 			document.body.style.overflow = "hidden";
 		} else {
-			console.log("visible");
 			document.body.style.overflow = "auto";
 		}
 	}, [isMobile, showMobileMenu]);
