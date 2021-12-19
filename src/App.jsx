@@ -16,7 +16,7 @@ function App() {
 	return (
 		<PointsProvider>
 			<ThemeProvider theme={THEME}>
-				<BrowserRouter basename="/aerorewards">
+				<BrowserRouter>
 					<GlobalStyles />
 					<SectionWrapper>
 						<NavbarContainer />
