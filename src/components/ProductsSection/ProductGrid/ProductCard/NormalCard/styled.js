@@ -46,14 +46,6 @@ const StyledCard = styled.div`
 
 		margin-left: 20px;
 	}
-
-	/* @media (max-width: 768px) {
-		transform: scale(0.8);
-	}
-
-	@media (max-width: 425px) {
-		transform: scale(0.69);
-	} */
 `;
 
 const ProductInfoWrapper = styled.div`

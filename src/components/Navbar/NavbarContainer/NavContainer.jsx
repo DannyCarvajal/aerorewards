@@ -1,15 +1,25 @@
-import { useState } from "react";
-// Styles
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import { NavContainer, Hamburger } from "./styled";
 import { AeroLogo } from "components/Global/images.styled";
-// Componets
+
 import SectionsNav from "../SectionsNav/SectionsNav";
-// Router
-import { Link } from "react-router-dom";
+
+import useScreenSize from "hooks/useScreenSize";
 
 const NavbarContainer = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const hideMenu = () => setShowMobileMenu(!showMobileMenu);
+	const [isMobile] = useScreenSize();
+
+	useEffect(() => {
+		if (isMobile && showMobileMenu) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+	}, [isMobile, showMobileMenu]);
 
 	return (
 		<NavContainer>
