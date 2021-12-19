@@ -1,24 +1,25 @@
-import { useState, useEffect } from "react";
-// Styles
+import { useState } from "react";
+
 import { SlotItemStyled } from "./styled.js";
-// Assets
+
 import AerolabLogo from "assets/icons/AerolabLogo.svg";
 import rewardsLogo from "assets/icons/AerorewardsLogo.svg";
 import DannyCarvajal from "assets/icons/DannyCarvajal.svg";
-// Logic
-import useGameLogic from "./gameLogic.js";
 
-const SlotItem = ({ imgNum, startGame, setStartGame }) => {
+import useGameStateChange from "./gameStateChange";
+
+const SlotItem = ({ imgNum, startGame, setStartGame, gameResult, setGameResult }) => {
 	const [currImg, setCurrImg] = useState(imgNum);
-	const { runSpinImages } = useGameLogic(setCurrImg, setStartGame);
-	let srcImg = currImg === 0 ? DannyCarvajal : currImg === 1 ? AerolabLogo : rewardsLogo;
+	useGameStateChange({
+		startGame,
+		setStartGame,
+		gameResult,
+		setGameResult,
+		setCurrImg,
+		imgNum,
+	});
 
-	useEffect(() => {
-		if (startGame === true) {
-			runSpinImages();
-			setStartGame("spinning");
-		}
-	}, [startGame, runSpinImages, setStartGame]);
+	let srcImg = currImg === 0 ? DannyCarvajal : currImg === 1 ? AerolabLogo : rewardsLogo;
 
 	return (
 		<SlotItemStyled>

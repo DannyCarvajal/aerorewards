@@ -1,14 +1,12 @@
-const useGameLogic = (setCurrImg, setStartGame) => {
+const useGameLogic = (setCurrImg, setGameResult) => {
 	const random12Images = [];
+	let imgCount = 0;
 	for (let i = 0; i < 12; i++) {
 		random12Images.push(Math.floor(Math.random() * 3));
 	}
 
-	// RETURN HOW MANY TIMES TWO RANDOM NUMBERS FROM 0 TO 2 ARE THE SAME
-
-	let imgCount = 0;
 	const updateImage = (speed, times) => {
-		return new Promise((resolve, reject) => {
+		return new Promise(resolve => {
 			let count = 0;
 			let changeImgInterval = setInterval(() => {
 				setCurrImg(random12Images[imgCount]);
@@ -25,16 +23,11 @@ const useGameLogic = (setCurrImg, setStartGame) => {
 	};
 
 	const runSpinImages = async () => {
-		let fastUpdate = await updateImage(1, 4);
-		let mediumSpeedUpdate = await updateImage(1.3, 4);
-		let SlowUpdate = await updateImage(2, 4);
+		await updateImage(1, 4);
+		await updateImage(1.3, 4);
+		let slowUpdate = await updateImage(2, 4);
 
-		console.log("thirdUpdate: ", SlowUpdate);
-		if (fastUpdate === mediumSpeedUpdate && mediumSpeedUpdate === SlowUpdate) {
-			setStartGame("win");
-		} else {
-			setStartGame("loose");
-		}
+		setGameResult(prev => [...prev, slowUpdate]);
 	};
 
 	return { runSpinImages };

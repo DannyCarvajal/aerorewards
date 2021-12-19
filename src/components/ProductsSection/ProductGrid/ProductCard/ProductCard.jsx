@@ -1,5 +1,5 @@
 import { useState } from "react";
-// Components
+
 import NormalCard from "./NormalCard/NormalCard";
 import ConfirmationCard from "./ConfirmationCard/ConfirmationCard";
 import SuccessCard from "./SuccessCard/SuccessCard";

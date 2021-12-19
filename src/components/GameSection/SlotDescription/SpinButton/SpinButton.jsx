@@ -5,8 +5,8 @@ import { SpinIcon, ButtonLevel3, ButtonLevel2, SpinButtonText, StyledSpinButton 
 let SPINNING_COLORS = {
 	init: "250, 185, 38",
 	spinning: "38, 72, 250",
-	win: "11, 242, 145",
-	loose: "217, 6, 128",
+	win: "11, 200, 105",
+	loose: "147, 65, 87",
 };
 
 const SpinButton = ({ startGame, setStartGame }) => {

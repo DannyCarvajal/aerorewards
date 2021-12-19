@@ -14,7 +14,7 @@ const ButtonLevel3 = styled.div`
 	width: 180px;
 	height: 180px;
 
-	background: ${({ spinningColor }) => `rgba(${spinningColor}, 0.12)`};
+	background: ${({ spinningColor }) => `rgba(${spinningColor}, 0.22)`};
 	border-radius: 50%;
 
 	@media (min-width: 768px) {
@@ -33,7 +33,7 @@ const ButtonLevel2 = styled.div`
 
 	margin: auto;
 
-	background: ${({ spinningColor }) => `rgba(${spinningColor}, 0.32)`};
+	background: ${({ spinningColor }) => `rgba(${spinningColor}, 0.42)`};
 	border-radius: 50%;
 
 	@media (min-width: 768px) {
@@ -45,6 +45,8 @@ const ButtonLevel2 = styled.div`
 const SpinButtonText = styled.h2`
 	color: rgba(255, 255, 255, 0.8);
 	font-size: ${({ theme }) => theme.SMALL};
+	font-weight: 400;
+	font-style: italic;
 `;
 
 const StyledSpinButton = styled.button`

@@ -2,7 +2,14 @@
 import { SpinsLeftContainer, SpinsLeftText } from "./styled";
 
 const SpinsLeftIndicator = () => {
-	const leftSpins = 10;
+	let leftSpins;
+
+	if (localStorage.getItem("spinsLeft")) {
+		const [, turnsLeft] = JSON.parse(localStorage.getItem("spinsLeft"));
+		leftSpins = turnsLeft;
+	} else {
+		leftSpins = 10;
+	}
 
 	return (
 		<SpinsLeftContainer>

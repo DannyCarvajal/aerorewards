@@ -1,7 +1,6 @@
-// Services
-import { reedemProduct } from "services/postData";
-// Update context
 import { usePoints } from "points/pointsContext";
+
+import { reedemProduct } from "services/postData";
 
 const useProductLogic = ({ setIsRedeemed, _id }) => {
 	const [, reloadPoints] = usePoints();
