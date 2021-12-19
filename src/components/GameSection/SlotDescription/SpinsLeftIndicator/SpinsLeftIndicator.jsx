@@ -5,8 +5,12 @@ const SpinsLeftIndicator = () => {
 	let leftSpins;
 
 	if (localStorage.getItem("spinsLeft")) {
-		const [, turnsLeft] = JSON.parse(localStorage.getItem("spinsLeft"));
-		leftSpins = turnsLeft;
+		const [prevDate, turnsLeft] = JSON.parse(localStorage.getItem("spinsLeft"));
+		if (prevDate === new Date().toDateString()) {
+			leftSpins = turnsLeft;
+		} else {
+			leftSpins = 10;
+		}
 	} else {
 		leftSpins = 10;
 	}

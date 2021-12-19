@@ -49,14 +49,16 @@ const useGameStateChange = ({
 			if (gameResult.every(item => item === gameResult[0])) {
 				setStartGame("win");
 				// ADD POINTS WON
-				addPoints(1000)
-					.then(_ => {
-						reloadPoints();
-					})
-					.catch(err => {
-						alert("Couldnt add points, we are sorry");
-						console.log(err);
-					});
+				if (imgNum === 0) {
+					addPoints(1000)
+						.then(_ => {
+							reloadPoints();
+						})
+						.catch(err => {
+							alert("Couldnt add points, we are sorry");
+							console.log(err);
+						});
+				}
 			} else {
 				setStartGame("loose");
 			}
