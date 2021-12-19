@@ -61,14 +61,24 @@ const useGameStateChange = ({
 				setStartGame("loose");
 			}
 			// UPDATE LOCAL STORAGE, JUST DO IT ONCE WITH THE FIRST ITEM
+			const InitiliazeStorage = () => {
+				const spinsLeft = [new Date().toDateString(), 9];
+				localStorage.setItem("spinsLeft", JSON.stringify(spinsLeft));
+			};
+
 			if (imgNum === 0) {
 				if (localStorage.getItem("spinsLeft")) {
+					// CHECK IF LOCALSTORAGE WAS CREATED TODAY
 					const spinsLeft = JSON.parse(localStorage.getItem("spinsLeft"));
-					spinsLeft[1] = spinsLeft[1] - 1;
-					localStorage.setItem("spinsLeft", JSON.stringify(spinsLeft));
+
+					if (spinsLeft[0] === new Date().toDateString()) {
+						spinsLeft[1] = spinsLeft[1] - 1;
+						localStorage.setItem("spinsLeft", JSON.stringify(spinsLeft));
+					} else {
+						InitiliazeStorage();
+					}
 				} else {
-					const spinsLeft = [new Date().toDateString(), 9];
-					localStorage.setItem("spinsLeft", JSON.stringify(spinsLeft));
+					InitiliazeStorage();
 				}
 			}
 
