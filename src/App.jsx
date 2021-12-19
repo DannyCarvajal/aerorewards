@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles, THEME } from "constants/globalStyles";
 import { SectionWrapper } from "./app.styled";
 
-import Home from "pages/Home";
+import Home from "pages/home/Home";
 import Products from "pages/products/Products";
 import GameSection from "pages/game/Game";
 import NavbarContainer from "components/Navbar/NavbarContainer/NavContainer";

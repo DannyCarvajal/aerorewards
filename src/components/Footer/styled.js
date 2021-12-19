@@ -8,7 +8,6 @@ const StyledFooter = styled.footer`
 	width: 100%;
 	height: 60px;
 
-	margin-top: 30px;
 	padding: 0.5rem 1rem;
 
 	background-color: ${({ theme }) => theme.LIGHT_GRAY};

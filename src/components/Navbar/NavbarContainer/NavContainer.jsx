@@ -16,6 +16,8 @@ const NavbarContainer = () => {
 	useEffect(() => {
 		if (isMobile && showMobileMenu) {
 			document.body.style.overflow = "hidden";
+		} else if (!isMobile && showMobileMenu) {
+			setShowMobileMenu(false);
 		} else {
 			document.body.style.overflow = "auto";
 		}

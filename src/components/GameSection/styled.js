@@ -22,6 +22,8 @@ const SlotContainerStyled = styled.div`
 
 		width: 95%;
 
+		margin-bottom: 30px;
+
 		border-radius: 20px;
 	}
 `;

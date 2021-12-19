@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { BottomMenuContainer } from "components/ProductsSection/MenuBottom/styled";
+
 const ProductsSection = styled.section`
 	display: flex;
 	flex-direction: column;
@@ -11,6 +13,10 @@ const ProductsSection = styled.section`
 
 	header {
 		margin-top: 36px;
+	}
+
+	${BottomMenuContainer} {
+		margin-bottom: 30px;
 	}
 `;
 
