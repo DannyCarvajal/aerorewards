@@ -1,5 +1,5 @@
 import { useState, createContext, useContext, useEffect } from "react";
-// Context
+
 import { useProducts } from "./productsContext";
 
 const PaginationContext = createContext();

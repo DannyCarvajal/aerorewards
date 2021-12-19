@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { usePoints } from "points/pointsContext";
-// Styles
+
 import { UserDataContainer } from "./styled";
-// Services
-import { getUserData } from "services/getData";
-// Components
+
 import PointsContainer from "components/Global/PointsContainer/PointsContainer";
+
+import { getUserData } from "services/getData";
+
+import { usePoints } from "points/pointsContext";
 
 const UserData = () => {
 	const [userName, setUserName] = useState("");

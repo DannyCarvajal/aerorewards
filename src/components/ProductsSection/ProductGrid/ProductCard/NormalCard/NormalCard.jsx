@@ -1,4 +1,3 @@
-// Styles
 import {
 	StyledCard,
 	CanBuyIcon,
@@ -9,10 +8,9 @@ import {
 	RedeemButton,
 } from "./styled";
 
-// Consuming context
-import { usePoints } from "points/pointsContext";
-// Components
 import PointsContainer from "components/Global/PointsContainer/PointsContainer";
+
+import { usePoints } from "points/pointsContext";
 
 const NormalCard = ({ product, setRedeemInProcess }) => {
 	const { category, cost, img, name } = product;

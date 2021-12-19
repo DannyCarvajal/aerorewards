@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// Assets
+
 import arrowRight from "assets/icons/arrowRight.svg";
 import arrowLeft from "assets/icons/arrowLeft.svg";
 

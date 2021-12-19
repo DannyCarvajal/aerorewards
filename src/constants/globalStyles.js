@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
 		font-size: 9px;
 	}
 
+
 	@media (min-width:768px) {
 		html{
 			font-size: 10px;
@@ -52,4 +53,11 @@ const MEDIA_SIZES = {
 	LARGE_DESKTOP: "1440px",
 };
 
-export { GlobalStyles, THEME, MEDIA_SIZES };
+let SPINNING_COLORS = {
+	init: "250, 185, 38",
+	spinning: "38, 72, 250",
+	win: "11, 200, 105",
+	loose: "147, 65, 87",
+};
+
+export { GlobalStyles, THEME, MEDIA_SIZES, SPINNING_COLORS };

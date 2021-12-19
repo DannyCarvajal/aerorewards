@@ -1,4 +1,3 @@
-// Styles
 import { StyledHeader, StyledTitle } from "./styled";
 
 const Header = () => {

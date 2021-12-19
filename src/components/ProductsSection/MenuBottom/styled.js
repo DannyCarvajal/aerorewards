@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// Assets
+
 import { ArrowRight } from "components/Global/icons.styled";
 
 const BottomMenuContainer = styled.div`

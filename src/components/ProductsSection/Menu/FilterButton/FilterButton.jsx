@@ -1,4 +1,3 @@
-// Styles
 import { StyledFilterButton } from "./styled";
 
 const FilterButton = ({ title, action, active, updateActive }) => {

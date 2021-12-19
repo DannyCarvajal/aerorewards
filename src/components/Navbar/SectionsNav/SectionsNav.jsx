@@ -1,6 +1,5 @@
-// Styles
 import { SectionsContainerNav, StyledLink } from "./styled";
-// Components
+
 import UserData from "../UserData/UserData";
 
 const SectionsNav = ({ active, hideMenu }) => {

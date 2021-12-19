@@ -1,4 +1,3 @@
-// Styles
 import { SpinsLeftContainer, SpinsLeftText } from "./styled";
 
 const SpinsLeftIndicator = () => {

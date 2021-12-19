@@ -1,7 +1,6 @@
-// Styles
 import { StyledConfirmCard, ConfirmText, ConfirmButton, CancelButton, CanBuyWhite } from "./styled";
 import { CheckIcon, CancelIcon } from "components/Global/icons.styled";
-// Logic
+
 import useProductLogic from "./productLogic";
 
 const ConfirmationCard = ({ product, setIsRedeemed }) => {

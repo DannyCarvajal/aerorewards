@@ -1,14 +1,14 @@
 import { useLayoutEffect } from "react";
-// Styles
+
 import { StyledFilterContainer, FilterTitles } from "./styled";
-// Components
+
 import FilterButton from "../FilterButton/FilterButton";
-// Consume Context
-import { useProducts } from "products/productsContext";
-// Constants
-import { FILTER_BUTTONS } from "constants/buttons";
-// Hooks - useActiveButtons
+
 import { useActiveButtons } from "hooks/useActiveButtons";
+
+import { useProducts } from "products/productsContext";
+
+import { FILTER_BUTTONS } from "constants/buttons";
 
 const FilterContainer = () => {
 	const [products, , dispatch] = useProducts();

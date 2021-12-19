@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// Assets
+
 import headerProducts from "assets/images/headerProducts.png";
 
 const StyledHeader = styled.header`

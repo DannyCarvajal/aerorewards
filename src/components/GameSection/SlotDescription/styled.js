@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// Components
+
 import { SpinsLeftContainer } from "./SpinsLeftIndicator/styled";
 
 const StyledSlotDescription = styled.div`
@@ -11,24 +11,36 @@ const StyledSlotDescription = styled.div`
 	position: relative;
 	width: 100%;
 
+	padding: 50px 0;
+
 	${SpinsLeftContainer} {
 		position: absolute;
-		bottom: -50px;
 		right: 0;
+		bottom: 10px;
 
 		padding: 10px 40px;
 	}
 
 	@media (min-width: 768px) {
-		width: 25%;
+		width: 100%;
+
+		padding-top: 0;
 
 		${SpinsLeftContainer} {
-			padding: 15px 60px;
-
-			position: absolute;
-			top: 50px;
-			right: 0;
+			top: 0px;
 			bottom: unset;
+
+			padding: 15px 60px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		width: 25%;
+
+		padding: 0;
+
+		${SpinsLeftContainer} {
+			top: -80px;
 		}
 	}
 

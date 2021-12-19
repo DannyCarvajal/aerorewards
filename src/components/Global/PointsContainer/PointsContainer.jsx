@@ -1,10 +1,9 @@
-// Styles
 import { PointsStyled } from "./styled";
-// Assets
+
 import coin from "assets/icons/coin.svg";
 
-// TYPE COULD BE EITHER "PRICE" FOR PRODUCTS, OR DEFAULT FOR POINTS
 const PointsContainer = ({ points, type }) => {
+	// TYPE COULD BE EITHER "PRICE" FOR PRODUCTS, OR DEFAULT FOR POINTS
 	let prefix = type === "price" ? "$" : "";
 
 	return (

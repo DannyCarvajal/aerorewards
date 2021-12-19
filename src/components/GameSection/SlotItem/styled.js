@@ -10,8 +10,6 @@ const SlotItemStyled = styled.div`
 	min-width: 100px;
 	max-width: 150px;
 
-	background: linear-gradient(195.46deg, #3e3e3e 1.97%, rgba(0, 0, 0, 0.46) 101.93%);
-	box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
 	border-radius: 15px;
 
 	@media (min-width: 768px) {
@@ -19,6 +17,9 @@ const SlotItemStyled = styled.div`
 		height: 360px;
 		min-width: unset;
 		max-width: unset;
+
+		background: linear-gradient(195.46deg, #3e3e3e 1.97%, rgba(0, 0, 0, 0.46) 101.93%);
+		box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
 	}
 
 	@media (min-width: 1120px) {
@@ -27,4 +28,11 @@ const SlotItemStyled = styled.div`
 	}
 `;
 
-export { SlotItemStyled };
+const SpinningImg = styled.img`
+	width: ${({ currImg }) => (currImg === 0 ? "100px" : "80px")};
+	@media (min-width: 768px) {
+		width: ${({ currImg }) => (currImg === 0 ? "130px" : "110px")};
+	}
+`;
+
+export { SlotItemStyled, SpinningImg };

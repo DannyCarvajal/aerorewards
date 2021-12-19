@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { ArrowRight } from "components/Global/icons.styled";
 
 const StyledMenu = styled.div`

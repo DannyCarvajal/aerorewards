@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { SlotItemStyled } from "./styled.js";
+import { SlotItemStyled, SpinningImg } from "./styled.js";
 
 import AerolabLogo from "assets/icons/AerolabLogo.svg";
 import rewardsLogo from "assets/icons/AerorewardsLogo.svg";
@@ -23,7 +23,7 @@ const SlotItem = ({ imgNum, startGame, setStartGame, gameResult, setGameResult }
 
 	return (
 		<SlotItemStyled>
-			<img src={srcImg} alt="slot-item" width={srcImg === DannyCarvajal ? 130 : 110} />
+			<SpinningImg src={srcImg} alt="slot-item" currImg={currImg} />
 		</SlotItemStyled>
 	);
 };

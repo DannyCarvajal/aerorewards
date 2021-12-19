@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext, createContext } from "react";
-// Services
+
 import { getUserData } from "services/getData";
 
 const PointsContext = createContext();

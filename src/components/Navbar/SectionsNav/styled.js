@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// Router
 import { Link } from "react-router-dom";
 
 const SectionsContainerNav = styled.div`

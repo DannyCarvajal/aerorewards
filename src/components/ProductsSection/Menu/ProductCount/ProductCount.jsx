@@ -1,6 +1,5 @@
-// Styles
 import { CountContainer, CountTitle } from "./styled";
-// Consuming context
+
 import { usePagination } from "products/paginationContext";
 
 const ProductCount = () => {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// Assets
+
 import fullLogo from "assets/images/FullLogo.png";
 
 const AeroLogo = styled.img.attrs({

@@ -1,6 +1,5 @@
-// Styles
 import { GameSectionStyled, GameTextExplain, DecorationLine } from "./styled.js";
-// Components
+
 import SlotMachineContainer from "components/GameSection/SlotMachineContainer";
 
 const GameSection = () => {

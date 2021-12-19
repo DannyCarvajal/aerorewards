@@ -1,4 +1,3 @@
-// Styles
 import { StyledFooter, FooterText } from "./styled";
 
 const Footer = () => {

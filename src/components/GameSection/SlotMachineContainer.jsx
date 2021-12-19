@@ -1,7 +1,7 @@
 import { useState } from "react";
-// Styles
+
 import { SlotContainerStyled } from "./styled.js";
-// Components
+
 import SlotItemContainer from "./SlotItemContainer/SlotItemContainer";
 import SlotDescription from "./SlotDescription/SlotDescription";
 

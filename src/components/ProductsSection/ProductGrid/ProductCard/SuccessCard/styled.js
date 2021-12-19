@@ -1,7 +1,7 @@
 import styled from "styled-components";
-// Styles
+
 import { StyledCard } from "../NormalCard/styled";
-// Animations
+
 import { SuccessAnimation } from "components/Global/transitions.styled";
 
 const SuccessText = styled.p`

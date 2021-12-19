@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
-// Styles
+
 import { SpinIcon, ButtonLevel3, ButtonLevel2, SpinButtonText, StyledSpinButton } from "./styled";
 
-let SPINNING_COLORS = {
-	init: "250, 185, 38",
-	spinning: "38, 72, 250",
-	win: "11, 200, 105",
-	loose: "147, 65, 87",
-};
+import { SPINNING_COLORS } from "constants/globalStyles";
 
 const SpinButton = ({ startGame, setStartGame }) => {
 	const [spinButtonText, setSpinButtonText] = useState("SPIN");

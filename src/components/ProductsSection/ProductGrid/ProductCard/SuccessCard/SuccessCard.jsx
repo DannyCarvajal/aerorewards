@@ -1,4 +1,3 @@
-// Styles
 import { StyledSuccessCard, SuccessText } from "./styled";
 import { CheckIcon, CancelIcon } from "components/Global/icons.styled";
 

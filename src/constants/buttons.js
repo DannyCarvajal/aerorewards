@@ -1,4 +1,3 @@
-// Context
 import { PRODUCT_ACTIONS } from "products/productsReducer";
 
 const FILTER_BUTTONS = [

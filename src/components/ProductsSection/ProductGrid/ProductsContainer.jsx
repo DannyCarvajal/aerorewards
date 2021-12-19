@@ -1,8 +1,7 @@
-// Styles
 import { GridProductContainer } from "./styled";
-// Components
-import ProductCard from "../ProductCard/ProductCard";
-// Consume Context
+
+import ProductCard from "./ProductCard/ProductCard";
+
 import { useProducts } from "products/productsContext";
 import { usePagination } from "products/paginationContext";
 

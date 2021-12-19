@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// Assets
+
 import buyBlue from "assets/icons/buyBlue.svg";
 import iconForbidden from "assets/icons/iconForbidden.svg";
 
