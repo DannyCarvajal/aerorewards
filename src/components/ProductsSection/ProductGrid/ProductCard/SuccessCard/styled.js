@@ -18,11 +18,13 @@ const StyledSuccessCard = styled(StyledCard)`
 
 	background: ${({ success, theme }) => (success === "ERROR" ? theme.RED_FORBIDDEN : theme.SUCESS)};
 
-	animation: ${SuccessAnimation} 2s;
-
 	i {
 		font-size: 5rem;
 		color: white;
+	}
+
+	@media (min-width: 768px) {
+		animation: ${SuccessAnimation} 2s;
 	}
 `;
 

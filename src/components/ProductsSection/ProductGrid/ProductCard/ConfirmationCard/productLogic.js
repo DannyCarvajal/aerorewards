@@ -17,7 +17,7 @@ const useProductLogic = ({ setIsRedeemed, _id }) => {
 			.catch(err => {
 				setIsRedeemed("ERROR");
 				setTimeout(() => setIsRedeemed(false), 4000);
-				console.log(err);
+				console.error(err);
 			});
 	};
 

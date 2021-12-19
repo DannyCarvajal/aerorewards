@@ -56,7 +56,7 @@ const useGameStateChange = ({
 						})
 						.catch(err => {
 							alert("Couldnt add points, we are sorry");
-							console.log(err);
+							console.error(err);
 						});
 				}
 			} else {

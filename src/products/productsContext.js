@@ -19,7 +19,7 @@ const ProductsProvider = ({ children }) => {
 				dispatch({ type: "INIT", payload: data });
 			})
 			.catch(err => {
-				console.log(err);
+				console.error(err);
 			});
 	}, []);
 

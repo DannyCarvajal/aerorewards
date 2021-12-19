@@ -49,8 +49,6 @@ const StyledConfirmCard = styled(StyledCard)`
 
 	background: ${({ theme }) => theme.MAIN_BLUE};
 
-	animation: ${LeftToRight} 1s ease-in-out;
-
 	${ConfirmButton} {
 		position: absolute;
 		right: 15px;
@@ -61,6 +59,10 @@ const StyledConfirmCard = styled(StyledCard)`
 		position: absolute;
 		left: 15px;
 		bottom: 15px;
+	}
+
+	@media (min-width: 768px) {
+		animation: ${LeftToRight} 1s ease-in-out;
 	}
 `;
 
