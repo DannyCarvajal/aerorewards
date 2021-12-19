@@ -4,11 +4,11 @@ import { StyledSlotDescription } from "./styled";
 import SpinsLeftIndicator from "./SpinsLeftIndicator/SpinsLeftIndicator";
 import SpinButton from "./SpinButton/SpinButton";
 
-const SlotDescription = () => {
+const SlotDescription = ({ startGame, setStartGame }) => {
 	return (
 		<StyledSlotDescription>
 			<SpinsLeftIndicator />
-			<SpinButton />
+			<SpinButton setStartGame={setStartGame} startGame={startGame} />
 		</StyledSlotDescription>
 	);
 };

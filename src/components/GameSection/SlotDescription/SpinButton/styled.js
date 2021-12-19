@@ -14,7 +14,7 @@ const ButtonLevel3 = styled.div`
 	width: 180px;
 	height: 180px;
 
-	background: rgba(250, 185, 38, 0.12);
+	background: ${({ spinningColor }) => `rgba(${spinningColor}, 0.12)`};
 	border-radius: 50%;
 
 	@media (min-width: 768px) {
@@ -33,7 +33,7 @@ const ButtonLevel2 = styled.div`
 
 	margin: auto;
 
-	background: rgba(250, 185, 38, 0.32);
+	background: ${({ spinningColor }) => `rgba(${spinningColor}, 0.32)`};
 	border-radius: 50%;
 
 	@media (min-width: 768px) {
@@ -53,14 +53,14 @@ const StyledSpinButton = styled.button`
 
 	margin: auto;
 
-	background: #fab926;
+	background: ${({ spinningColor }) => `rgb(${spinningColor})`};
 	border: none;
 	border-radius: 50%;
 
 	cursor: pointer;
 
 	&:hover {
-		background: rgba(250, 185, 38, 0.87);
+		background: ${({ spinningColor }) => `rgba(${spinningColor}, 0.87)`};
 	}
 
 	i {
