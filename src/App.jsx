@@ -1,16 +1,15 @@
-// Styles
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles, THEME } from "constants/globalStyles";
-// Pages
+import { SectionWrapper } from "./app.styled";
+
 import Home from "pages/Home";
 import Products from "pages/products/Products";
 import GameSection from "pages/game/Game";
-// Router
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-// Components
 import NavbarContainer from "components/Navbar/NavbarContainer/NavContainer";
 import Footer from "components/Footer/Footer";
-// Context
+
 import PointsProvider from "points/pointsContext";
 
 function App() {
@@ -19,14 +18,16 @@ function App() {
 			<ThemeProvider theme={THEME}>
 				<BrowserRouter basename="/aerorewards">
 					<GlobalStyles />
-					<NavbarContainer />
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/products" element={<Products />} />
-						<Route path="/game" element={<GameSection />} />
-						<Route path="*" element={<Navigate to="/" />} />
-					</Routes>
-					<Footer />
+					<SectionWrapper>
+						<NavbarContainer />
+						<Routes>
+							<Route path="/" element={<Home />} />
+							<Route path="/products" element={<Products />} />
+							<Route path="/game" element={<GameSection />} />
+							<Route path="*" element={<Navigate to="/" />} />
+						</Routes>
+						<Footer />
+					</SectionWrapper>
 				</BrowserRouter>
 			</ThemeProvider>
 		</PointsProvider>

@@ -12,7 +12,7 @@ const SlotContainerStyled = styled.div`
 
 	background: linear-gradient(180deg, #ff9100 0%, #9a5a05 0.01%, #e19e21 100%);
 
-	@media (min-width: 768px) {
+	@media (min-width: 1024px) {
 		flex-direction: row;
 
 		width: 95%;

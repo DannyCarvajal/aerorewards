@@ -15,10 +15,15 @@ const SlotItemStyled = styled.div`
 	border-radius: 15px;
 
 	@media (min-width: 768px) {
-		width: 240px;
-		height: 380px;
+		width: 200px;
+		height: 360px;
 		min-width: unset;
 		max-width: unset;
+	}
+
+	@media (min-width: 1120px) {
+		width: 240px;
+		height: 380px;
 	}
 `;
 

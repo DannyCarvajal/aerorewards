@@ -11,9 +11,15 @@ const SlotItemContainerStyled = styled.div`
 
 	@media (min-width: 768px) {
 		justify-content: center;
-		gap: 50px;
+		gap: 30px;
 
+		width: 75%;
+	}
+
+	@media (min-width: 1440px) {
 		width: 70%;
+
+		gap: 50px;
 	}
 `;
 

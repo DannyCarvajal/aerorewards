@@ -20,7 +20,7 @@ const StyledSlotDescription = styled.div`
 	}
 
 	@media (min-width: 768px) {
-		width: 30%;
+		width: 25%;
 
 		${SpinsLeftContainer} {
 			padding: 15px 60px;
@@ -30,6 +30,10 @@ const StyledSlotDescription = styled.div`
 			right: 0;
 			bottom: unset;
 		}
+	}
+
+	@media (min-width: 1440px) {
+		width: 30%;
 	}
 `;
 
