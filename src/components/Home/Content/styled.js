@@ -9,6 +9,22 @@ const MainTitleHome = styled.h1`
 	font-style: italic;
 `;
 
+const CallToAction = styled(Link)`
+	background-color: ${({ theme }) => theme.BLACK};
+	border: none;
+	border-radius: 15px;
+
+	padding: 10px 70px;
+
+	color: white;
+	font-size: ${({ theme }) => theme.LARGE};
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+
+	cursor: pointer;
+`;
+
 const HomeContentContainer = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -50,7 +66,7 @@ const ConfettiBg = styled.img.attrs({
 const HomeContent = styled.p`
 	max-width: 80%;
 
-	margin: 40px 0 50px 0;
+	margin: 40px 0 20px 0;
 
 	font-size: ${({ theme }) => theme.LARGER};
 	font-weight: 300;
@@ -64,22 +80,10 @@ const HomeContent = styled.p`
 	i {
 		color: rgba(252, 178, 100, 1);
 	}
-`;
 
-const CallToAction = styled(Link)`
-	background-color: ${({ theme }) => theme.BLACK};
-	border: none;
-	border-radius: 15px;
-
-	padding: 10px 70px;
-
-	color: white;
-	font-size: ${({ theme }) => theme.LARGE};
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-
-	cursor: pointer;
+	@media (min-width: 400px) {
+		margin: 40px 0 50px 0;
+	}
 `;
 
 export { HomeContentContainer, ConfettiBg, MainTitleHome, HomeContent, CallToAction };
