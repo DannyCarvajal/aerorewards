@@ -15,17 +15,12 @@ const ProductsProvider = ({ children }) => {
 		getProducts()
 			.then(data => {
 				products.current = data;
-				console.log(products.current);
 				dispatch({ type: "INIT", payload: data });
 			})
 			.catch(err => {
 				console.error(err);
 			});
 	}, []);
-
-	useEffect(() => {
-		// console.log("currProd changed", currProd);
-	}, [currProd]);
 
 	return (
 		<productsContext.Provider value={[products.current, currProd, dispatch]}>

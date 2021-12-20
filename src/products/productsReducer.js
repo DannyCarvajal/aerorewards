@@ -7,9 +7,6 @@ const PRODUCT_ACTIONS = {
 };
 
 const productsReducer = (state, action) => {
-	console.log("productsReducer", action);
-	console.log(state);
-
 	switch (action.type) {
 		case PRODUCT_ACTIONS.INIT:
 			return action.payload;
