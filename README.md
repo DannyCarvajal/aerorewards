@@ -39,7 +39,7 @@ Base and essence of the design given, and used as guide.
 3. Added aerorewards logo, logo for items that cannot be bought and items already redeemed
 4. Design of homepage & gamepage
 
-### Folder organization 📂
+## Folder organization 📂
 
 |-Assets <br> |-Components <br> |-Constants <br> |- Hooks <br> |- Services <br> |-Pages <br>
 |-Context
