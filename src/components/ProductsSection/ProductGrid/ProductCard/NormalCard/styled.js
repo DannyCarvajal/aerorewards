@@ -15,9 +15,9 @@ const ProductImg = styled.img.attrs(({ img }) => ({
 	src: img,
 	alt: "productImg",
 }))`
-	width: 243px;
+	width: 234px;
 	max-width: 90%;
-	height: 175.5px;
+	height: 169px;
 
 	margin-top: 35px;
 `;

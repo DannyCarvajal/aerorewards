@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import headerProducts from "assets/images/headerProducts.png";
+import headerProducts from "assets/images/headerProducts.webp";
 
 const StyledHeader = styled.header`
 	position: relative;
