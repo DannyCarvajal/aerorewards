@@ -23,6 +23,10 @@ const ProductsProvider = ({ children }) => {
 			});
 	}, []);
 
+	useEffect(() => {
+		console.log("currProd changed", currProd);
+	}, [currProd]);
+
 	return (
 		<productsContext.Provider value={[products.current, currProd, dispatch]}>
 			{children}

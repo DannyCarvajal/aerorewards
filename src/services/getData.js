@@ -3,11 +3,16 @@ import { userDataUrl, reedemHistoryUrl, getProductsUrl, headers } from "../const
 // CURRYING TO GET DATA
 function fetchData(url) {
 	return async () => {
-		const request = await fetch(url, {
-			method: "GET",
-			headers,
-		});
-		return await request.json();
+		try {
+			const request = await fetch(url, {
+				method: "GET",
+				headers,
+			});
+			return await request.json();
+		} catch (error) {
+			console.error(error);
+			return false;
+		}
 	};
 }
 

@@ -39,7 +39,7 @@ const THEME = {
 	TEXT_DARK: "#616161",
 	TEXT_LIGHT: "#A3A3A3",
 	// FONTS
-	ULTRA_LARGE: "6rem",
+	ULTRA_LARGE: "6.5rem",
 	MAIN_TITLE: "5rem",
 	LARGER: "2.6rem",
 	LARGE: "2.3rem",

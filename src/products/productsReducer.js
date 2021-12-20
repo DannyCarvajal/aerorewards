@@ -3,7 +3,6 @@ const PRODUCT_ACTIONS = {
 	RECENT: "RECENT",
 	HIGHER_PRICE_TO_LOWER: "HIGHER_PRICE_TO_LOWER",
 	LOWER_PRICE_TO_HIGHER: "LOWER_PRICE_TO_HIGHER",
-	MY_PRODUCTS: "MY_PRODUCTS",
 };
 
 const productsReducer = (state, action) => {
@@ -19,10 +18,6 @@ const productsReducer = (state, action) => {
 
 		case PRODUCT_ACTIONS.LOWER_PRICE_TO_HIGHER:
 			return [...state].sort((a, b) => a.cost - b.cost);
-
-		case PRODUCT_ACTIONS.MY_PRODUCTS:
-			console.log("my products");
-			return state;
 
 		default:
 			return state;

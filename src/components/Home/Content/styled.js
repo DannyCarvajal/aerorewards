@@ -50,7 +50,7 @@ const ConfettiBg = styled.img.attrs({
 const HomeContent = styled.p`
 	max-width: 80%;
 
-	margin: 20px 0 50px 0;
+	margin: 40px 0 50px 0;
 
 	font-size: ${({ theme }) => theme.LARGER};
 	font-weight: 300;
