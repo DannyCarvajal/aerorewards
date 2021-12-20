@@ -70,4 +70,4 @@ I really enjoyed this project and I hope you can enjoy it too. All the additions
 the overall experience. Special thanks to Aerolab 🪁
 
 > If you are having fun, you are probably in the right way  
-> ** Danny Carvajal**
+> **Danny Carvajal**
