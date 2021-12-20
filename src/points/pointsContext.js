@@ -6,15 +6,15 @@ const PointsContext = createContext();
 const usePoints = () => useContext(PointsContext);
 
 function PointsProvider({ children }) {
-	const [points, setPoints] = useState(null);
+	const [points, setPoints] = useState(1000);
 
 	const initPoints = async () => {
-		try {
-			const { points } = await getUserData();
-			setPoints(points);
-		} catch (error) {
-			console.error(error);
-		}
+		// try {
+		// 	const { points } = await getUserData();
+		// 	setPoints(points);
+		// } catch (error) {
+		// 	console.error(error);
+		// }
 	};
 
 	useEffect(() => initPoints(), [points]);

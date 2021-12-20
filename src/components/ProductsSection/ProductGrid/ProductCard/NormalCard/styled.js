@@ -93,7 +93,7 @@ const RedeemButton = styled.button`
 	cursor: ${({ canBuy }) => (canBuy ? "pointer" : "static")};
 
 	&:hover {
-		background: #18bbe8;
+		background: ${({ canBuy }) => (canBuy ? "#18bbe8" : "rgba(217, 20, 128, 1)")};
 	}
 `;
 

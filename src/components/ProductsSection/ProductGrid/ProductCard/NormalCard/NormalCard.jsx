@@ -10,15 +10,15 @@ import {
 
 import PointsContainer from "components/Global/PointsContainer/PointsContainer";
 
-import { usePoints } from "points/pointsContext";
+import usePriceLogic from ".//productPriceLogic";
 
 const NormalCard = ({ product, setRedeemInProcess }) => {
 	const { category, cost, img, name } = product;
-	const [points] = usePoints();
-	let canBuy = cost <= points;
-	let pointsToBuy = cost - points;
-	let btnText = canBuy ? "Redeem now" : `you need ${pointsToBuy} more points`;
-	let largeText = name.length > 20;
+	const { canBuy, btnText, largeText, buyHandler } = usePriceLogic({
+		cost,
+		name,
+		setRedeemInProcess,
+	});
 
 	return (
 		<StyledCard className="card">
@@ -29,7 +29,7 @@ const NormalCard = ({ product, setRedeemInProcess }) => {
 				<ProductName>{name}</ProductName>
 				<ProductCategory largeText={largeText}>{category}</ProductCategory>
 			</ProductInfoWrapper>
-			<RedeemButton canBuy={canBuy} onClick={setRedeemInProcess}>
+			<RedeemButton canBuy={canBuy} onClick={buyHandler}>
 				{btnText}
 			</RedeemButton>
 		</StyledCard>
