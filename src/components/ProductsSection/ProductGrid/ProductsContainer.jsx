@@ -9,11 +9,12 @@ const ProductsContainer = () => {
 	const [, currProducts] = useProducts();
 	const [, fromToProduct] = usePagination();
 	const displayProducts = currProducts.slice(fromToProduct[0], fromToProduct[1]);
+	const productAmount = displayProducts.length;
 
 	return (
-		<GridProductContainer>
+		<GridProductContainer productAmount={productAmount}>
 			{displayProducts.map(product => (
-				<ProductCard key={product._id} product={product} />
+				<ProductCard key={product.createDate + product._id} product={product} />
 			))}
 		</GridProductContainer>
 	);

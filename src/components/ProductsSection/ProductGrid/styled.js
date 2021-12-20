@@ -7,7 +7,11 @@ const GridProductContainer = styled.div`
 	place-items: center;
 
 	width: 100%;
-	min-height: 1200px;
+	min-height: ${({ productAmount }) => {
+		if (productAmount > 0) return "500px";
+		if (productAmount > 4) return "1000px";
+		if (productAmount > 8) return "1500px";
+	}};
 
 	margin-top: 60px;
 	margin-bottom: 20px;

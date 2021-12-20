@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 import buyBlue from "assets/icons/buyBlue.svg";
 import iconForbidden from "assets/icons/iconForbidden.svg";
+import iconAlreadyRedeemed from "assets/icons/iconAlreadyRedeemed.svg";
 
-const CanBuyIcon = styled.img.attrs(({ canBuy }) => ({
-	src: canBuy ? buyBlue : iconForbidden,
+const CanBuyIcon = styled.img.attrs(({ canBuy, redeemProd }) => ({
+	src: redeemProd ? iconAlreadyRedeemed : canBuy ? buyBlue : iconForbidden,
 	alt: "buyIcon",
 }))`
 	width: 42px;
@@ -80,7 +81,11 @@ const RedeemButton = styled.button`
 	width: 85%;
 	height: 40px;
 
-	background: ${({ canBuy, theme }) => (canBuy ? theme.MAIN_BLUE : theme.RED_FORBIDDEN)};
+	background: ${({ canBuy, redeemProd, theme }) => {
+		if (redeemProd) return theme.BLACK;
+		if (canBuy) return theme.MAIN_BLUE;
+		return theme.RED_FORBIDDEN;
+	}};
 	border-radius: 15px;
 	border: none;
 
@@ -90,10 +95,14 @@ const RedeemButton = styled.button`
 	font-style: italic;
 	text-align: center;
 
-	cursor: ${({ canBuy }) => (canBuy ? "pointer" : "static")};
+	cursor: ${({ canBuy, redeemProd }) => (!canBuy || redeemProd ? "static" : "pointer")};
 
 	&:hover {
-		background: ${({ canBuy }) => (canBuy ? "#18bbe8" : "rgba(217, 20, 128, 1)")};
+		background: ${({ canBuy, redeemProd, theme }) => {
+			if (redeemProd) return theme.BLACK;
+			if (canBuy) return "#18bbe8";
+			return "rgba(217, 20, 128, 1)";
+		}};
 	}
 `;
 

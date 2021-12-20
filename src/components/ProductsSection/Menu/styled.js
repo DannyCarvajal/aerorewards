@@ -31,7 +31,6 @@ const StyledMenu = styled.div`
 	}
 
 	@media (min-width: 768px) {
-		border-bottom: 1px solid #d9d9d9;
 	}
 
 	@media (min-width: 1024px) {
@@ -41,12 +40,16 @@ const StyledMenu = styled.div`
 		width: 85%;
 		height: 100px;
 
+		border-bottom: 1px solid #d9d9d9;
+	}
+
+	@media (min-width: 1240px) {
 		.countContainer {
 			display: flex;
 		}
 	}
 
-	@media (min-width: 1080px) {
+	@media (min-width: 1300px) {
 		${ArrowRight} {
 			display: block;
 		}

@@ -24,7 +24,7 @@ const ProductsProvider = ({ children }) => {
 	}, []);
 
 	useEffect(() => {
-		console.log("currProd changed", currProd);
+		// console.log("currProd changed", currProd);
 	}, [currProd]);
 
 	return (
