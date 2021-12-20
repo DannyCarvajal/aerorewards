@@ -58,8 +58,8 @@ _.... subcomponents_
 - The context is stored in folders with the _identity_ name. For example, products would make an
   identity, and points count would make another one.
 
-  - The styles organization follows Aerolab advice to make css more readable, where css properties
-    are divided in small groups like _display_, _margins and paddings_, _box enhancement_, etc.
+- The styles organization follows Aerolab advice to make css more readable, where css properties are
+  divided in small groups like _display_, _margins and paddings_, _box enhancement_, etc.
 
 - The imports follow a similar organization dividing them by groups like _packages_, _styles_,
   _components_, _logic_, _context_, etc.
